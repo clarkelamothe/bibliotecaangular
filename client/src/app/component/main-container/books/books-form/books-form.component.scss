@@ -1,0 +1,22 @@
+i {
+  color: rgb(148, 213, 235);
+}
+
+.add-book {
+  background-color: lightgray;
+  margin-bottom: 1em;
+}
+
+.listar {
+  background-color: rgb(236, 236, 236);
+  padding: 1em;
+  .form-group {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 2em;
+    label {
+      padding: 0.5em;
+    }
+  }
+}

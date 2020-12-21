@@ -1,0 +1,30 @@
+.container-cards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  padding: 0;
+  .card {
+    position: relative;
+    margin: 0 0 1em 1em;
+    .delete-book {
+      position: absolute;
+      top: -10px;
+      left: -8px;
+      i {
+        background-color: rgb(255, 75, 75);
+        color: white;
+        border-radius: 50%;
+        overflow: hidden;
+        cursor: pointer;
+      }
+    }
+    p {
+      i {
+        margin-left: 1em;
+        color: gray;
+        cursor: pointer;
+      }
+    }
+  }
+}

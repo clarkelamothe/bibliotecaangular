@@ -1,0 +1,20 @@
+<div class="container-cards">
+  <div class="card" style="width: 18rem" *ngFor="let book of books">
+    <div class="delete-book">
+      <i class="far fa-times-circle"></i>
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">{{ book.name }}</h5>
+      <h6 class="card-subtitle mb-2 text-muted">
+        Presatado a <b>{{ book.person != "" ? book.person : "nadie" }}</b>
+      </h6>
+      <p class="card-text">
+        {{ book.description }}
+        <i class="far fa-edit"></i>
+      </p>
+
+      <a href="#" class="card-link">Devolver</a>
+      <a href="#" class="card-link">Prestar</a>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,26 @@
+<div class="card add-genre" style="width: 18rem">
+  <div class="card-body">
+    <h6 class="card-title">Agregar un nuevo genero</h6>
+    <button
+      type="submit"
+      class="btn btn-light btn-outline"
+      (click)="formGenre()"
+    >
+      <i class="fas fa-plus-square"></i>
+    </button>
+    <form *ngIf="clicked" (ngSubmit)="saveGenre()">
+      <div class="form-group">
+        <label for="exampleFormControlInput1">Genero</label>
+        <input
+          type="text"
+          class="form-control"
+          id="exampleFormControlInput1"
+          name="name"
+          [(ngModel)]="genre.name"
+        />
+      </div>
+
+      <button type="submit" class="btn btn-primary">Guardar</button>
+    </form>
+  </div>
+</div>

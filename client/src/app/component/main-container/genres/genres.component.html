@@ -1,0 +1,8 @@
+<div class="container-fluid container-genres">
+  <app-genres-form (genreSent)="newGenre($event)"></app-genres-form>
+  <app-genres-list
+    [genres]="genres"
+    (toDelete)="genreToDelete($event)"
+    (toUpdate)="genreToUpdate($event)"
+  ></app-genres-list>
+</div>

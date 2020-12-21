@@ -1,0 +1,31 @@
+.container-cards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  padding: 0;
+  .card {
+    position: relative;
+    margin: 0 0 1em 1em;
+    .delete-genre {
+      position: absolute;
+      top: -10px;
+      left: -8px;
+      i {
+        background-color: rgb(255, 75, 75);
+        color: white;
+        border-radius: 50%;
+        overflow: hidden;
+        cursor: pointer;
+      }
+    }
+    h6 {
+      i {
+        margin-left: 0.5em;
+        color: gray;
+        cursor: pointer;
+        font-size: small;
+      }
+    }
+  }
+}

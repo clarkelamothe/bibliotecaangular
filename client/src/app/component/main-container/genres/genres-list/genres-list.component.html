@@ -1,0 +1,30 @@
+<div class="container-cards">
+  <div class="card" style="width: 18rem" *ngFor="let genre of genres">
+    <div class="delete-genre">
+      <i class="far fa-times-circle" (click)="delete(genre)"></i>
+    </div>
+    <div class="card-body">
+      <h6 class="card-title">
+        {{ genre.name }}
+        <i class="far fa-edit" (click)="editGenre(genre)" *ngIf="!editClicked">
+        </i>
+      </h6>
+      <div class="card-body card-xs" *ngIf="editClicked">
+        <input
+          type="text"
+          class="form-control"
+          id="exampleFormControlInput1"
+          [(ngModel)]="genre.name"
+          name="newName"
+        />
+        <button
+          type="submit"
+          class="btn btn-primary btn-sm"
+          (click)="updateGenre(genre)"
+        >
+          Guardar
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

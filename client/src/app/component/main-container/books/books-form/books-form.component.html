@@ -1,0 +1,80 @@
+<!-- <div class="container-fluid mb-2" style="width: 18rem">
+  <form class="d-flex">
+    <input
+      class="form-control me-2"
+      type="search"
+      placeholder="Buscar Libro"
+      aria-label="Buscar Libro"
+      name="name"
+    />
+    <button class="btn btn-outline-success" type="submit">Buscar</button>
+  </form>
+</div> -->
+
+<div class="card add-book" style="width: 18rem">
+  <div class="card-body book-body">
+    <h6 class="card-title">Agregar un nuevo libro</h6>
+    <button type="submit" class="btn btn-light btn-outline" (click)="form()">
+      <i class="fas fa-plus-square"></i>
+    </button>
+    <form *ngIf="clicked">
+      <div class="form-group">
+        <label for="exampleFormControlInput1">Nombre del Libro</label>
+        <input type="text" class="form-control" id="exampleFormControlInput1" />
+      </div>
+
+      <div class="form-group">
+        <label for="exampleFormControlSelect1">Prestar a </label>
+        <select class="form-control" id="exampleFormControlSelect1">
+          <option></option>
+          <option>Juan</option>
+          <option>Pablo</option>
+          <option>Lor</option>
+          <option>Fran</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="exampleFormControlSelect1">Genero</label>
+        <select class="form-control" id="exampleFormControlSelect1">
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="exampleFormControlTextarea1">Descripcion del libro</label>
+        <textarea
+          class="form-control"
+          id="exampleFormControlTextarea1"
+          rows="3"
+        ></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Guardar</button>
+    </form>
+  </div>
+</div>
+
+<div class="card add-book listar">
+  <h6>Listar por</h6>
+  <div class="form-group">
+    <label for="exampleFormControlSelect1">Persona: </label>
+    <select class="form-control" id="exampleFormControlSelect1">
+      <option></option>
+      <option>Juan</option>
+      <option>Pablo</option>
+      <option>Lor</option>
+      <option>Fran</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlSelect1">Genero: </label>
+    <select class="form-control" id="exampleFormControlSelect1">
+      <option></option>
+      <option>Juan</option>
+      <option>Pablo</option>
+      <option>Lor</option>
+      <option>Fran</option>
+    </select>
+  </div>
+</div>

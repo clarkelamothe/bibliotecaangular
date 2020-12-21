@@ -1,0 +1,11 @@
+<div class="container-fluid container-contacts">
+  <app-contacts-form
+    (contactSent)="newContact($event)"
+    (nickNameSent)="buscarNickname($event)"
+  ></app-contacts-form>
+  <app-contacts-list
+    [contacts]="contacts"
+    (toDeleteContact)="contactToDelete($event)"
+    (toUpdateContact)="contactToUpdate($event)"
+  ></app-contacts-list>
+</div>

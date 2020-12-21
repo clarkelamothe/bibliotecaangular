@@ -1,0 +1,47 @@
+<div class="container-cards">
+  <div
+    class="card"
+    style="width: 18rem"
+    *ngFor="let contact of contacts"
+    (click)="delete(contact)"
+  >
+    <div class="delete-contact">
+      <i class="far fa-times-circle"></i>
+    </div>
+    <div class="card-body">
+      <h6 class="card-title">
+        {{ contact.name }} {{ contact.lastName.toUpperCase() }}
+      </h6>
+      <h6 class="card-subtitle mb-2 text-muted">
+        Alias: <b>{{ contact.nickName }}</b>
+      </h6>
+      <p class="card-text">
+        {{ contact.email }}
+      </p>
+      <p class="card-text">
+        {{ contact.phone }}
+        <i
+          (click)="editNumber(contact)"
+          *ngIf="!editClicked"
+          class="far fa-edit"
+        ></i>
+      </p>
+      <p class="card-text" *ngIf="editClicked">
+        <input
+          type="text"
+          class="form-control"
+          id="exampleFormControlInput1"
+          [(ngModel)]="contact.phone"
+          name="newPhone"
+        />
+        <button
+          type="submit"
+          class="btn btn-primary btn-sm"
+          (click)="updatePhone(contact)"
+        >
+          Guardar
+        </button>
+      </p>
+    </div>
+  </div>
+</div>
